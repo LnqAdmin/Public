@@ -1,0 +1,20 @@
+name: TeamsNotify
+
+on:
+  # Trigger the workflow on push or pull request
+  pull_request:
+   types: [assigned, opened, synchronize, reopened, review_requested, labeled, closed]
+
+jobs:
+  with_overwrite:
+    name: One with overwrite
+    runs-on: ubuntu-18.04
+    steps:
+     - name: Deploy Stage
+       uses: CamiloGarciaLaRotta/watermelon-http-client@v1
+       with:
+        url: 'https://t2tavamigrations.webhook.office.com/webhookb2/5c7b77bf-ba44-49d8-9293-74ff75bfbe03@2cd74de4-31b3-44ae-b6bb-3b1ffbd9b1d1/IncomingWebhook/24490c6597f04fa9b63e499f05e52cd0/c19dc52d-df6d-40ba-ae70-36ded154271b'
+        method: post
+        data: '{"Text": "${{ github.event.repository.full_name }}/pulls/${{ github.event.pull_request.number }}"}'       
+        
+  

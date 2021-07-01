@@ -1,0 +1,29 @@
+on: issue_comment
+
+jobs:
+  pr_commented:
+    # This job only runs for pull request comments
+    name: PR comment
+    if: ${{ github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Stage
+        uses: CamiloGarciaLaRotta/watermelon-http-client@v1
+        with:
+         url: 'https://t2tavamigrations.webhook.office.com/webhookb2/5c7b77bf-ba44-49d8-9293-74ff75bfbe03@2cd74de4-31b3-44ae-b6bb-3b1ffbd9b1d1/IncomingWebhook/24490c6597f04fa9b63e499f05e52cd0/c19dc52d-df6d-40ba-ae70-36ded154271b'
+         method: post
+         data: '{"Text": "${{ github.event.repository.full_name }}/pulls/${{ github.event.issue.number }}"}' 
+      - run:
+         echo "Comment on PR ${{ github.event.issue.number }}"
+  issue_commented:
+    # This job only runs for issue comments
+    name: Issue comment
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Stage
+        uses: CamiloGarciaLaRotta/watermelon-http-client@v1
+        with:
+         url: 'https://t2tavamigrations.webhook.office.com/webhookb2/5c7b77bf-ba44-49d8-9293-74ff75bfbe03@2cd74de4-31b3-44ae-b6bb-3b1ffbd9b1d1/IncomingWebhook/24490c6597f04fa9b63e499f05e52cd0/c19dc52d-df6d-40ba-ae70-36ded154271b'
+         method: post
+         data: '{"Text": "${{ github.event.repository.full_name }}/pulls/${{ github.event.pull_request.number }}"}'   

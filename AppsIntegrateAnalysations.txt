@@ -1,0 +1,52 @@
+Adobe Creative Cloud
+https://helpx.adobe.com/in/creative-cloud/help/share.html
+Add the app to slack
+Login from adobe creative cloud
+Download Creative Cloud Desktop use that credentials
+Download either of the creative platforms
+Create a project 
+Click share Create public link
+Share in the channel in which u want to have the project communications 
+Users can communicate and comment Which are messages within channels as well as by bot
+
+
+Sisense for Cloud Data Teams
+This create an account in sisense
+add to slack navigates to an older version of sisense
+{unable to integrate / may be app is outdated}
+
+CloudAMQP
+Add to slack 
+login from the website
+https://www.cloudamqp.com/slack.html
+Create a free instance {lemur plan}
+https://api.cloudamqp.com/console
+open its manager 
+In that click alarm add recipients click slack and allow
+Select the channel u want it to get configured to
+
+
+
+Jiraffe
+Add to slack 
+Login with jiraffe 
+configure jira with atlassian and slack
+create a domain
+access the atlassian project which u created  
+u can create issue tasks bugs from the slack app and will be reflected in jirrafe
+
+
+Cloud show
+download the cloud show launcher and login into cloud show
+create a connection and access the launcher we ll get a code copy and paste and launcher will be connected then add slack to one of its templates to configure the channel specific chats {chats displayed only after configured}
+
+
+BT cloud work
+this app is available as ringcentral which we need to install and add to slack once logged in we can connect and enter commands to connect to the app
+
+Other Apps
+they require aws account and azure account to configure which requires credit card details to take a free trial.
+checked on ways to create a virtual card and access but also requires payment.
+Requires aws account ID /Azure app id and secret ID 
+
+
